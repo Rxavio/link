@@ -1,0 +1,169 @@
+
+{% extends 'profiles/base.html' %}
+{% load static %}
+
+{% block title %}
+Booking Detail
+{% endblock title %}
+
+{% block content %}
+
+    <div class="container">
+
+        <!--Grid row-->
+        <div class="row">
+        
+        <div class="col-md-7 mt-4">
+        <!-- START MAIN Card -->
+        <div class="card">
+       
+        <div class="card-body ml-md-2 p-sm-2 p-0 mt-3">
+        
+        <!-- border: 1px solid #000; -->
+        <div class="d-flex flex-xl-row flex-lg-row flex-md-column flex-sm-column flex-column" style="width: 100%;">
+        
+       
+        
+        
+        
+        <div class="account-attributes d-flex justify-content-start align-items-start vertical-align-center flex-column p-xl-4 p-lg-4 p-md-3 p-sm-3 p-0">
+        <div class="d-flex flex-row justify-content-between" style="width: 100%;">
+            <div class="d-flex flex-column justify-content-between ml-3">
+                <h5 class="text-dark">
+                    <strong>
+                        Booking Detail
+                    </strong>
+                </h5>
+            </div>
+        </div>
+        
+        <div class="d-flex justify-content-between flex-column mt-3 p-3" style="width: 100%;">
+            
+                <div class="d-flex justify-content-between flex-row my-1" style="width: 100%;">
+                    <div class="text d-flex">
+                        <span class='text-dark'>Client:</span>
+                    </div>
+                    <div class="d-flex">
+                        <span class="text text-primary">{{user}}</span>
+                    </div>
+                </div>
+                
+                 <div class="d-flex justify-content-between flex-row my-1" style="width: 100%;">
+                    <div class="text d-flex">
+                        <span class='text-dark'>Table:</span>
+                    </div>
+                    <div class="d-flex">
+                        <span class="text text-primary">{{table_category}}</span>  
+                    </div>
+                </div>
+        
+                <form id="booking-form" action="" method="POST">
+                    {% csrf_token %}
+
+                    <div class="d-flex justify-content-between flex-row my-1" style="width: 100%;">
+                        <div class="text d-flex">
+                            <span class='text-dark'>Check In:</span>
+                        </div>
+                        <div class="d-flex">
+                            <input type="datetime-local" id="id_check_in" name="check_in" required> 
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between flex-row my-1" style="width: 100%;">
+                        <div class="text d-flex">
+                            <span class='text-dark'>Check Out:</span>
+                        </div>
+                        <div class="d-flex">
+                            <input type="datetime-local" id="id_check_out" name="check_out" required>
+                        </div>
+                    </div>
+                    <br>
+                    
+                    <div class="input-div">
+                        <a class="btnback" href="{% url 'profiles:TableListView'%}">Back</a>
+                        <button class="btnbook" type="submit">Book Hour</button>
+                       
+                    </div>
+                </form>
+        
+              
+        
+        </div>
+        </div>
+        </div>
+        <!-- -->
+        
+        
+        
+        </div> <!-- END CARD BODY -->
+        <br>
+        </div> <!-- END MAIN CARD -->
+        
+        </div>
+        <!-- end col -->
+
+
+        <div class="col-md-5 mb-4 wow fadeIn mt-4">
+            <div class="card mb-4">
+            <!-- <div class="card-header"><h4>Booking Hour Format</h4></div> -->
+            <div class="card-body"> 
+                <div class="post-list"> 
+                    <table class="centerTable">
+                        <thead>
+                          <tr>
+                            <th>Day</th>
+                            <th>Open</th>
+                            <th>Close</th>
+                             </tr>
+                        </thead>
+                <tbody>
+                <tr>
+                  <td data-label="By">Monday to Sunday</td>
+                  <td data-label="title">9:00 AM</td>
+                  <td data-label="Created"> 8:00 PM</td>
+                </tr>
+                        </tbody>
+                      </table>   
+
+
+
+                      <table class="centerTable">
+                        <thead>
+                          <tr>
+                            <th>Booking</th>
+                            <th>First Hour</th>
+                            <th>Last Hour</th>
+                             </tr>
+                        </thead>
+                <tbody>
+                <tr>
+                  <td data-label="By">Monday to Sunday</td>
+                  <td data-label="title">9:00 AM</td>
+                  <td data-label="Created"> 7:00 PM</td>
+                </tr>
+                        </tbody>
+                      </table>      
+
+                </div>
+
+               Notes: You are allowed to Book 1hour of Meeting<br>
+               Use this format: Eg 22/11/2020 10:00 (specific hour)<br>
+               Do not use this format: Eg 22/11/2020 10:15 (Avoid minutes)
+            
+         
+
+
+            </div>
+            </div>
+            </div>
+
+     </div>       
+        
+        
+        </div> 
+        <!-- end row -->
+        <br> <br> 
+
+        {% endblock content %}
+
+

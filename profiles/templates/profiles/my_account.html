@@ -1,0 +1,217 @@
+{% extends 'profiles/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block title %}
+My profile
+{% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row m-y-2 thumbnail2">
+        <br> <br> <br>
+        
+         <div class="col-lg-8 order-lg-2">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="" data-target="#profile" data-toggle="tab" class="nav-link active">Profile</a>
+                </li>
+  
+                <li class="nav-item">
+                    <a href="" data-target="#edit" data-toggle="tab" class="nav-link">Edit</a>
+                </li>
+            </ul>
+            <div class="tab-content py-4">
+                <div class="tab-pane active" id="profile">
+                      <!-- START MAIN Card -->
+                      <div class="card">
+                      <div class="card-header font-weight-bold">
+                      <h3>Account</h3>
+                      
+                      </div>
+                      <div class="card-body ml-md-2 p-sm-2 p-0 mt-3">
+                      
+                      
+                      
+                      
+                      <!-- border: 1px solid #000; -->
+                      <div class="d-flex flex-xl-row flex-lg-row flex-md-column flex-sm-column flex-column" style="width: 100%;">
+                      <div class="d-xl-flex d-lg-flex d-md-none d-sm-none d-none justify-content-center flex-column" style="width: 40%;">
+                      
+                      <div class="d-flex flex-column justify-content-center align-items-center vertical-align-center">
+                          
+                              <img class="img-thumbnail" id="id_profile_image_display" src="{{ user.profile.image.url }}" style="height:220px; width:100%;"> 
+                          
+        
+                      </div>
+                      
+                      
+                      </div>
+                      <div class="d-xl-none d-lg-none d-md-flex d-sm-flex d-flex justify-content-center flex-column" style="width: 100%;" >
+                          
+                          <div class="d-flex  flex-column  justify-content-center align-items-center vertical-align-center">
+                              
+                                  <img class="img-thumbnail profile-image" id="id_profile_image_display" src="{{ user.profile.image.url }}" style="height:220px; width:60%;"> 
+                              
+                          </div>
+                         
+                      </div>
+                      
+                      
+                      
+                      <div class="account-attributes d-flex justify-content-start align-items-start vertical-align-center flex-column p-xl-4 p-lg-4 p-md-3 p-sm-3 p-0">
+                    
+                      <div class="d-flex justify-content-between flex-column mt-3 p-3" style="width: 100%;">
+  
+                              <!-- START FIRST NAME FIELD -->
+                              <div class="d-flex justify-content-between flex-row my-1" style="width: 100%;">
+                                  <div class="text d-flex">
+                                      <span class='text-dark'>First name:</span>
+                                  </div>
+                                  <div class="d-flex">                                        
+                                   <span class="text text-primary">{{user.profile.first_name}}</span>    
+                                  </div>
+                              </div>
+                              <div class="d-flex justify-content-between flex-row" style="width: 100%;">
+                                  <div class="text d-flex">  
+                                  </div>
+                              </div>
+                              <!-- END FIRST NAME FIELD -->
+                      
+                              <!-- START LAST NAME FIELD -->
+                              <div class="d-flex justify-content-between flex-row my-1" style="width: 100%;">
+                                  <div class="text d-flex">
+                                      <span class='text-dark'>Last Name:</span>
+                                  </div>
+                                  <div class="d-flex">
+                                  <span class="text text-primary">{{user.profile.last_name}}</span>       
+                                  </div>
+                              </div>
+                              <div class="d-flex justify-content-between flex-row" style="width: 100%;">
+                                  <div class="text d-flex">  
+                                  </div>
+                              </div>
+                              <!-- END LAST NAME FIELD -->
+  
+                              <!-- START USERNAME FIELD -->
+                              <div class="d-flex justify-content-between flex-row my-1" style="width: 100%;">
+                                <div class="text d-flex">
+                                    <span class='text-dark'>Username:</span>
+                                </div>
+                                <div class="d-flex">
+                                    <span class="text text-primary">{{ user.username }}</span>  
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between flex-row" style="width: 100%;">
+                                <div class="text d-flex">  
+                                </div>
+                            </div>
+                            <!-- END USERNAME FIELD -->
+  
+                              <!-- START EMAIL FIELD -->
+                              <div class="d-flex justify-content-between flex-row my-1" style="width: 100%;">
+                                  <div class="text d-flex">
+                                      <span class='text-dark'>Email: </span>
+                                  </div>
+                                  <div class="text d-flex">      
+                               <span class="text-primary">{{ user.email }}</span>    
+                                  </div>
+                              </div>
+
+                              <div class="d-flex justify-content-between flex-row my-1" style="width: 100%;">
+                                <div class="text d-flex">
+                                    <span class='text-dark'>Gender: </span>
+                                </div>
+                                <div class="text d-flex">      
+                             <span class="text-primary">{{user.profile.gender}}</span>    
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between flex-row my-1" style="width: 100%;">
+                                <div class="text d-flex">
+                                    <span class='text-dark'>Address: </span>
+                                </div>
+                                <div class="text d-flex">      
+                             <span class="text-primary">{{user.profile.address}}</span>    
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between flex-row my-1" style="width: 100%;">
+                                <div class="text d-flex">
+                                    <span class='text-dark'>Bio: </span>
+                                </div>
+                                <div class="text d-flex">      
+                             <span class="text-primary">{{user.profile.bio}}</span>    
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between flex-row my-1" style="width: 100%;">
+                                <div class="text d-flex">
+                                    <span class='text-dark'>Age: </span>
+                                </div>
+                                <div class="text d-flex">      
+                             <span class="text-primary">{{user.profile.age}}</span>    
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between flex-row my-1" style="width: 100%;">
+                                <div class="text d-flex">
+                                    <span class='text-dark'>Telephone: </span>
+                                </div>
+                                <div class="text d-flex">      
+                             <span class="text-primary">{{user.profile.telephone}}</span>    
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between flex-row my-1" style="width: 100%;">
+                                <div class="text d-flex">
+                                    <span class='text-dark'>National ID: </span>
+                                </div>
+                                <div class="text d-flex">      
+                             <span class="text-primary">{{user.profile.nationalid}}</span>    
+                                </div>
+                            </div>
+
+
+  
+                             
+                      
+                
+                      </div>
+                      </div>
+                      </div>
+                      <!-- -->
+                      
+                      </div>
+                      </div>
+                     
+                    <!--/row-->
+                </div>
+               
+                <div class="tab-pane" id="edit">
+                  <div class="card card-register mx-auto mt-5">
+                    <div class="col-md-12">
+                    <div class="profile-form">  
+                    <form role="form"method="POST" enctype="multipart/form-data">
+                              {% csrf_token %}
+                              {{ u_form}}
+                              {{ p_form}}
+                 <button type="submit" class="mainbtn">Save Changes</button> 
+                    </form>
+                  </div>
+                </div>
+                </div>
+                </div>
+            </div>
+        </div> 
+       
+         <div class="col-lg-4 pull-lg-8 text-xs-center">
+            <!-- <img src="{{user.profile.image.url}}" class="rounded mx-auto d-block img-thumbnail2" alt="image"style=" height:220px; width:100%;">  -->
+            <img src="{{user.profile.image2.url}}" class="rounded mx-auto d-block img-thumbnail2" alt="image"style=" height:220px; width:100%;"> 
+            <img src="{{user.profile.image3.url}}" class="rounded mx-auto d-block img-thumbnail2" alt="image"style=" height:220px; width:100%;"> <br>
+              </div>
+              
+        </div>
+
+    </div>
+<br> <br> <br> 
+{% endblock content %}

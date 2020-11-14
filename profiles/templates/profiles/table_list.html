@@ -1,0 +1,36 @@
+{% extends 'profiles/base.html' %}
+{% load static %}
+
+{% block title %}
+Book Table 
+{% endblock title %}
+
+{% block content %}
+<div id="rooms">
+    {% for table_category, table_url in table_list %}
+    <center>
+    <div class="room">
+        <a href="{{table_url}}">
+      <img src="{% static 'images/together.png' %}"alt="no image"><br>
+      <h5>{{table_category}}<h5>
+      </a>
+    </div>
+    </center>
+    {% endfor %}
+  </div>
+  <br> <br> <br>
+
+{% endblock content %}
+
+
+
+ 
+
+
+    
+
+
+
+
+
+  

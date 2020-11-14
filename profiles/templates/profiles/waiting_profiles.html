@@ -1,0 +1,59 @@
+{% extends 'profiles/base.html' %}
+{% load static %}
+
+{% block title %}
+Waiting
+{% endblock title %}
+
+{% block content %}
+ <section class="wrapper">
+    <section class="team ">
+        <div class="container containermain">
+            <div class="row  sub_content">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="dividerHeading">
+                        <h4><span>My Waiting</span></h4>
+                    </div>
+                </div>
+
+                {% for obj in object_list %}
+
+                {% if obj.user in rel_receiver and request.user not in obj.friends.all %}
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="dreamz-team">
+                        <div class="pic">
+                            <img src="{{obj.image.url}}"alt='no image'  class="rounded mx-auto d-block img-thumbnail4"style="height:220px; width:100%;">
+                            <div class="social_media_team">
+                                <ul class="team_social">
+                                    
+                    
+                                        <li><button class="requestbtn" data-placement="top" data-toggle="tooltip" title="Waiting For Approval"><i class="far fa-handshake"></i></button></li>
+                                
+                
+                                        <form action="{% url 'profiles:remove-friend' %}" method="POST">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="profile_pk" value={{obj.pk}}>
+                                        <li><button class="cancelbtn" data-placement="top" data-toggle="tooltip" title=" Cancel invite"><i class="fas fa-times-circle"></i></button></li>
+                                        </form> 
+                                
+
+                                      <li><a class="twtr" href="{{obj.get_absolute_url}}" data-placement="top" data-toggle="tooltip" title="View profile"><i class="fa fa-eye"></i></a></li> 
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="team_prof">
+                            <h3 class="names">{{obj.user}}<small class="waiting">Waiting</small></h3>  
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
+             {% endfor %}
+            </div>
+        </div>
+    </section>
+</section> 
+
+
+{% endblock content %}

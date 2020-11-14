@@ -1,0 +1,82 @@
+{% extends 'profiles/base.html' %}
+{% load static %}
+
+{% block title %}
+Place
+{% endblock title %}
+
+{% block content %}
+    <div class="container">
+
+        <!--Grid row-->
+        <div class="row">
+        
+        <div class="col-md-8 mt-4">
+        <!-- START MAIN Card -->
+        <div class="card">
+       
+        <div class="card-body ml-md-2 p-sm-2 p-0 mt-3">
+           
+        <!-- border: 1px solid #000; -->
+        <div class="d-flex flex-xl-row flex-lg-row flex-md-column flex-sm-column flex-column" style="width: 100%;">
+        
+       
+        
+        
+        
+        <div class="account-attributes d-flex justify-content-start align-items-start vertical-align-center flex-column p-xl-4 p-lg-4 p-md-3 p-sm-3 p-0">
+        <div class="d-flex flex-row justify-content-between" style="width: 100%;">
+            <div class="d-flex flex-column justify-content-between ml-3">
+                <h5 class="text-dark">
+                    <strong>
+                        Welcome Dear {{user}}
+                      
+                    </strong>
+                </h5>
+            </div>
+        </div>
+               
+        {% for table_category, table_url in table_list %}
+        <div class="d-flex justify-content-between flex-column mt-3 p-3" style="width: 100%;">               
+          <h2>{{table_category}} Plaza<h2>
+        <a class="btn btn-primary" href="{{table_url}}">Go Booking</a> 
+        </div>
+        {% endfor %}
+        <div>    
+        </div>
+
+     
+        <hr>
+
+     
+
+
+
+
+        </div>
+        </div>
+        <!-- -->
+        
+        
+        
+        </div> <!-- END CARD BODY -->
+        <br>
+        </div> <!-- END MAIN CARD -->
+        
+        </div>
+        <!-- end col -->
+
+       </div>       
+        
+        
+        </div> 
+        <!-- end row -->
+        <br> <br> 
+    
+        {% endblock content %}
+
+
+
+
+
+  

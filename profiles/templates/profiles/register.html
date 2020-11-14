@@ -1,0 +1,361 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Remarkable - Register</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Remarkable platform founded in 2020, We are independent platform that specialized in delivering professional services in organizing people's meetings for great purpose to the public by a team of mature,professional and energetic people"/>
+  <meta name="keywords" content="Love,debate,send an invite to a friend,accept an invite of a friend,reject an invite of a friend,booking for meeting,give advices,give assistance"/>
+  <meta name="author" content="Xv"/>
+  <meta property="title"content="Remarkable"/>
+  <meta property="og:description" content="Remarkable platform founded in 2020, We are independent platform that specialized in delivering professional services in organizing people's meetings for great purpose to the public by a team of mature,professional and energetic people"/>
+  <meta property="og:title" content="Remarkable"/>
+  <meta content="Remarkable" property="og:site_name"/>
+  <meta property="og:url" content="https://www.remarkable.rw" />
+  <meta property="og:street_address" content="KG 609 St" />
+  <meta property="og:country_name" content="Rwanda" />
+  <meta property="og:phone_number" content="+250 788354979" />
+  <link rel="icon" type="image/png" href="{% static 'images/icon.png' %}">
+		 <link href="https://fonts.googleaapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+	     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+		<link href="{% static 'css/icofont.min.css' %}" rel="stylesheet">
+		<link href="{% static 'css/boxicons.min.css' %}" rel="stylesheet">
+		<link href="{% static 'css/venobox.css' %}" rel="stylesheet">
+		<link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet">
+		<link href="{% static 'css/aos.css' %}" rel="stylesheet">
+		<link href="{% static 'css/style2.css' %}" rel="stylesheet">
+		<link href="{% static 'css/nav.css' %}" rel="stylesheet">
+		<link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
+		  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<style>
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			background: #fff !important;
+		}
+		.user_card {
+position: relative;
+width: 450px;
+float:left;
+margin-top: auto;
+margin-bottom: auto;
+background: #fff;
+display: flex;
+justify-content: center;
+flex-direction: column;
+padding: 10px;
+box-shadow: 7px 7px 7px 7px   #eff8fa;
+border: 3px solid #fff;
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+-o-border-radius: 5px;
+
+		}
+
+		.form_container {
+			margin-top: 20px;
+		}
+
+		#form-title{
+			color: #fff;
+		}
+		.login_btn {
+			width: 100%;
+			background: #3abdd1;
+			color: #fff !important;
+			
+		}
+		.login_btn:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+			background: #3abdd1;
+		}
+		.login_container {
+			padding: 0 2rem;
+		}
+		.input-group-text {
+			background: #3abdd1;
+			color: #fff !important;
+			border: 0 !important;
+			border-radius: 0.25rem 0 0 0.25rem !important;
+		}
+		
+		.input_user,
+		.input_pass:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.errorlist{
+			color: red !important;
+			width: 100%;
+			margin-top: 10px;
+	
+		}
+		
+
+	</style>
+
+</head>
+<body>
+
+		 <!-- ======= Header ======= -->
+		 <nav class="navbar fixed-top navbar-light white scrolling-navbar">
+
+			<!-- FOR ALL SCREENS EXCEPT SMALL -->
+			<div class="nav-container-1 d-xl-flex d-lg-flex d-md-flex d-sm-none d-none">
+		
+			  
+				<!-- Navbar brand -->
+				<a class="navbar-brand text-dark" href="{% url 'profiles:index-view' %}">Remarkable</a>
+			
+				<ul class="nav nav-items text-dark">
+			  
+				<!-- <li>
+				
+			  </li> -->
+			  
+			
+				<!-- Dropdown -->
+			   
+			
+				</ul>
+			
+			<!-- END NAV SEARCH -->
+			
+			</div>
+			
+			
+			<!-- Dropdown -->
+		   
+			<div class="navbar-nav dropdown d-xl-flex d-lg-flex d-md-flex d-sm-none d-none">
+				<a class="nav-link text-dark" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+				aria-expanded="false">
+				Get Started
+				</a>
+				<div class="dropdown-menu dropdown-primary mr-lg-5 mr-md-5" aria-labelledby="navbarDropdownMenuLink">
+					<a class="dropdown-item" href="{% url 'profiles:register' %}">Register</a>
+					<a class="dropdown-item" href="{% url 'profiles:login' %}">Login</a>
+				</div>
+			</div>
+		
+		
+			
+			
+			<!-- END FOR ALL SCREENS EXCEPT SMALL -->
+			
+			
+			
+			<!-- FOR SMALL SCREENS -->
+			<div class="nav-container-2 d-flex d-lg-none d-md-none d-sm-flex d-flex">
+			
+			<div class="d-flex justify-content-start">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+					aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</div>
+			
+			 <!-- Collapsible content -->
+			  <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+		
+			  
+					<!-- Navbar brand -->
+				<a class="navbar-brand text-dark" href="{% url 'profiles:index-view' %}">Remarkable</a>
+			
+				<!-- Links -->
+				
+				
+				<!-- Dropdown -->
+				<div class="nav-item dropdown">
+					<a class="nav-link text-dark" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false">
+					Get Started
+					</a>
+					<div class="dropdown-menu dropdown-primary mr-lg-5 mr-md-5" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="{% url 'profiles:register' %}">Register</a>
+						<a class="dropdown-item" href="{% url 'profiles:login' %}">Login</a>
+					</div>
+				</div>
+				
+			
+			  </div>  <!-- Collapsible content -->
+			
+			
+			</div><!-- END FOR SMALL SCREENS -->
+			
+			</nav>
+		<!-- container start -->
+	<div class="container h-100">
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card">
+				<div class="d-flex justify-content-center">
+					<h3 id="form-title">SIGN UP ACCOUNT</h3>
+				</div>
+				<div class="d-flex justify-content-center form_container">
+
+					<form method="POST" action=""autocomplete="off">
+						{% csrf_token %}
+						<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+							{{form.username}}
+						</div>
+
+						<div class="input-group mb-2">
+							<div class="input-group-append">
+							<span class="input-group-text"><i class="fas fa-envelope-square"></i></span>
+							</div>
+							{{form.email}}
+						</div>
+						
+						<div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-key"></i></span>
+							</div>
+							{{form.password1}}
+						</div>
+						<div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-key"></i></span>
+							</div>
+							{{form.password2}}
+						</div>
+				   		<div class="d-flex justify-content-center mt-3 login_container">
+							 <input class="btn login_btn" type="submit" value="SignUp">
+				   		</div>
+					</form>
+				</div>
+
+				{{form.errors}}
+				
+				<div class="mt-4">
+					<div class="d-flex justify-content-center links">
+						Already have an account? <a href="{% url 'profiles:login' %}" class="ml-2">Login</a>
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+			
+		//Query All input fields
+		var form_fields = document.getElementsByTagName('input')
+		form_fields[1].placeholder='Username..';
+		form_fields[2].placeholder='Email..';
+		form_fields[3].placeholder='Enter password...';
+		form_fields[4].placeholder='Re-enter Password...';
+
+
+		for (var field in form_fields){	
+			form_fields[field].className += ' form-control'
+		}
+	</script>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+	<!-- ======= subscribe ======= -->
+
+   <div class="footer-top">
+	 <div class="container">
+	   <div class="row">
+
+		<div class="col-lg-3 col-md-6 footer-contact" data-aos="fade-up" data-aos-delay="100">
+            <h3>Remarkable</h3><br>
+            
+            <div class="info">
+              <div class="address">
+                <i class="icofont-google-map"></i>
+                <br> <br>
+                <p>KG 609 St</p>
+              </div>
+              <br>
+
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <br> <br>
+                <p>remarkable2507@gmail.com</p>
+              </div>
+
+              <br>
+
+              <div class="phone">
+                <i class="icofont-phone"></i>
+              <br> <br>
+			  <p>+250 788354979</p>
+              </div>
+        
+            </div>
+          </div>
+		 <div class="col-lg-3 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="200">
+		   <h4>Some useful Terms</h4>
+		   <ul>
+			 <li><i class="icofont-simple-up"></i>Home</li>
+			 <li><i class="icofont-simple-up"></i>About us</li>
+			 <li><i class="icofont-simple-up"></i>Services</li>
+			 <li><i class="icofont-simple-up"></i>How it Works</li>
+			 <li><a href="{% url 'profiles:how-it-works' %}"><i class="icofont-simple-up"></i>Guidance</a></li>
+			 <li><a href="{% url 'profiles:terms-conditions' %}"><i class="icofont-simple-up"></i>Terms and Conditions</a></li>
+		   </ul>
+		 </div>
+
+		 <div class="col-lg-3 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="300">
+		   <h4>Our Services</h4>
+		   <ul>
+			 <li><i class="icofont-simple-up"></i>Booking</li>
+			 <li><i class="icofont-simple-up"></i>Advices</li>
+			 <li><i class="icofont-simple-up"></i>Assistance</li>
+		   </ul>
+		 </div>
+
+		 <div class="col-lg-3 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="400">
+		   <h4>Our Social Networks</h4>
+		   <p>For more updates follow us on our social networks like twitter,facebbok,instagram and more videos on our youtube Channel.</p>
+		   <div class="social-links mt-3">
+			 <a href=""><i class="icofont-twitter"></i></a>
+			 <a href=""><i class="icofont-facebook"></i></a>
+			 <a href=""><i class="icofont-instagram"></i></a>
+			 <a href=""><i class="icofont-youtube"></i></a>
+		   </div>
+		 </div>
+
+	   </div>
+	 </div>
+   </div>
+
+   <div class="container py-4 copyrightdiv">
+	 <div class="copyright">
+	   &copy; <strong><span>Remarkable</span></strong>. All Rights Reserved Designed by <a href="#">VX</a>
+	 </div>
+	 <!-- <div class="credits"></div>
+	   Designed by <a href="#"> XO</a>
+	 </div> -->
+   </div>
+ </footer><!-- End Footer -->
+
+ <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+ <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+
+  <script type="text/javascript" src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+
+  <script type="text/javascript" src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+  <script type="text/javascript" src="{% static 'js/aos.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/jquery.easing.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+</body>
+</html>

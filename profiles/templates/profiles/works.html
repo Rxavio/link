@@ -1,0 +1,293 @@
+{% extends 'profiles/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+{% block title %}
+How it works
+{% endblock title %}
+
+{% block content %}
+<style type="text/css">
+    .container h3{
+        color: #3abdd1;
+    }  
+    .container{
+        height: auto;
+        width: 100%; 
+    }
+    .card{
+        min-height: 100vh;
+        height: 100%;
+        width: 100%;
+        margin: auto;
+        border: 1px solid #e1e1e1;
+        padding: 30px;
+        position: relative;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 7px 7px 7px 7px   #eff8fa;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+    }
+    @media screen and (max-width: 768px) {
+        .card{
+          
+            width: 95%;
+            margin: auto;
+        }
+      }  
+    </style>
+
+<div class="container">
+    <div class="card">
+<h3>Account</h3>
+
+<h5>1.Register your account</h5>
+    <p>    
+Enter your username, your valid email, password and confirm password.
+
+<div class="grid">               
+    <div class="grid-card">
+        <div>
+            <img class="img-works"src="{% static 'images/register1.png' %}"alt="no image"> 
+    </div>
+    </div> 
+ 
+</div> 
+</p>
+      
+<h5>2.Login with your account Credentials</h5>
+<p>
+To login enter your username and password 
+
+<div class="grid">               
+    <div class="grid-card">
+        <div>
+            <img class="img-works"src="{% static 'images/login.png' %}"alt="no image"> 
+    </div>
+    </div> 
+</div> 
+</p>
+
+<h5>3.Update your profile</h5>
+<p>
+ On dropdown link under your profile icon click my profile 
+ fill all required informations and upload the images then save changes<br>
+ we are highly recommend you to update your profile with your valid email,phone 
+ number and update your profile image with your own image because this will be so useful on this patform.
+ <div class="grid">               
+    <div class="grid-card">
+        <div>
+            <img class="img-works"src="{% static 'images/profile.png' %}"alt="no image"> 
+    </div>
+    </div> 
+    <div class="grid-card">
+        <div>
+            <img class="img-works"src="{% static 'images/edit1.png' %}"alt="no image">
+    </div>
+    </div> 
+    <div class="grid-card">
+        <div>
+            <img class="img-works"src="{% static 'images/edit2.png' %}"alt="no image">
+    </div>
+    </div> 
+
+    <div class="grid-card">
+        <div>
+            <img class="img-works"src="{% static 'images/edit3.png' %}"alt="no image">
+    </div>
+    </div> 
+</div> 
+</p>
+
+<h5>4.Change your Password</h5>
+<p>
+On dropdown link under your profile icon click password
+Enter your old password 
+and then enter new password and confirm new password then confirm changes. 
+<div class="grid">               
+    <div class="grid-card">
+        <div>
+            <img class="img-works"src="{% static 'images/changepass.png' %}"alt="no image"> 
+    </div>
+    </div> 
+   
+</div> 
+</p>
+
+
+<h5>5.Reset Password(Forget)</h5>
+<p>
+Under Login button click on Forget password link 
+enter your valid email, click the link on your  <a href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin">email</a>,
+enter new password and confirm new password.
+<div class="grid">               
+    <div class="grid-card">
+        <div>
+            <img class="img-works"src="{% static 'images/validreset.png' %}"alt="no image"> 
+    </div>
+    </div> 
+
+    <div class="grid-card">
+        <div>
+            <img class="img-works"src="{% static 'images/sendemail.png' %}"alt="no image"> 
+    </div>
+    </div> 
+
+    <div class="grid-card">
+        <div>
+            <img class="img-works"src="{% static 'images/resetnewpassword.png' %}"alt="no image"> 
+    </div>
+    </div> 
+
+    <div class="grid-card">
+        <div>
+            <img class="img-works"src="{% static 'images/resetdone.png' %}"alt="no image"> 
+    </div>
+    </div> 
+</div> 
+</p>
+
+<h5>6.Logout</h5>
+<p>
+This is your own account security, logout everytime especially when you are using public computers
+(Cyber Cafe,colleges,schools...).
+</p>
+
+<h3>Profiles</h3>
+<h5>1.Available</h5>
+    <p>    
+you did not  send invite to anybody, you did not receive an invite of anybody,
+this mean you are available to everyone on the platform,you can navigate to all Available
+profile, see the details of any profile and send him/her an invite vs you can receive an invite from 
+other profile anytime.
+<div class="grid">               
+    <div class="grid-card">
+        <div>
+            <img class="img-works"src="{% static 'images/availableog.png' %}"alt="no image"> 
+    </div>
+    </div> 
+
+    <div class="grid-card">
+        <div>
+            <img class="img-works"src="{% static 'images/availabledetails.png' %}"alt="no image"> 
+    </div>
+    </div> 
+    
+</div> 
+    </p>
+
+    <h5>2.Waiting</h5>
+    <p>    
+you've sent an invite to any profile but not response yet
+this profile will be on your waiting profile list and you are not available to other.
+you have to wait this profile respond you or cancel invite.
+<div class="grid">               
+    <div class="grid-card">
+        <div>
+            <img class="img-works"src="{% static 'images/waiting.png' %}"alt="no image"> 
+    </div>
+    </div> 
+
+    <div class="grid-card">
+        <div>
+            <img class="img-works"src="{% static 'images/waitingforapprovedetails.png' %}"alt="no image"> 
+    </div>
+    </div> 
+   
+</div> 
+ </p>
+
+ <h5>3.My invite</h5>
+ <p>    
+you've received an invite of other profile, which is on the list on your invite
+you can see the datails of the profile,you can accept this invite and also you can reject this invite.
+<div class="grid">               
+    <div class="grid-card">
+        <div>
+            <img class="img-works"src="{% static 'images/myinvite.png' %}"alt="no image"> 
+    </div>
+    </div> 
+
+    <div class="grid-card">
+        <div>
+            <img class="img-works"src="{% static 'images/myinvitedetails.png' %}"alt="no image"> 
+    </div>
+    </div> 
+   
+</div> 
+</p>
+
+<h5>4.Coupled</h5>
+ <p>    
+After some hours,minutes or seconds the invite you sent to any profile got accepted
+or after accepting the invite of other profile,
+this profile is on coupled list,you can view the details,you can end the relationship with this profile 
+and the main important you can do booking. 
+<div class="grid">               
+    <div class="grid-card">
+        <div>
+            <img class="img-works"src="{% static 'images/coupled.png' %}"alt="no image"> 
+    </div>
+    </div> 
+
+    <div class="grid-card">
+        <div>
+            <img class="img-works"src="{% static 'images/accepteddetails.png' %}"alt="no image"> 
+    </div>
+    </div> 
+   
+</div> 
+</p>
+
+
+<h3>Booking</h3>
+    <p>    
+you are definitely coupled, and you want to meet with this person you coupled with,
+click booking your space button,
+Navigate to the list of table where you can choose one table and book the free hour of your choice. <br>
+Note: <b>Email</b> and <b>Telephone Number</b> are so required to be in touch with you, we are highly recommend you to update
+your profile informations with your valid Email and Telephone number.
+To arrange the meeting we will always call the coupled profiles and ask them what they wish.
+<div class="grid">   
+    
+    <div class="grid-card">
+        <div>
+            <img class="img-works"src="{% static 'images/table2.png' %}"alt="no image"> 
+    </div>
+    </div> 
+    <div class="grid-card">
+        <div>
+            <img class="img-works"src="{% static 'images/bookingd.png' %}"alt="no image"> 
+    </div>
+    </div> 
+    <div class="grid-card">
+        <div>
+            <img class="img-works"src="{% static 'images/bookinghourd.png' %}"alt="no image">
+    </div>
+    </div> 
+
+    <div class="grid-card">
+        <div>
+            <img class="img-works"src="{% static 'images/yourbooking.png' %}"alt="no image">
+    </div>
+    </div> 
+    
+</div> 
+</p>
+
+
+    </div>
+    </div>
+    <br> <br> 
+
+{% endblock content %}
+
+
+
+
+

@@ -1,0 +1,162 @@
+{% load static %}
+<nav class="navbar fixed-top navbar-light white scrolling-navbar">
+
+    <!-- FOR ALL SCREENS EXCEPT SMALL -->
+    <div class="nav-container-1 d-xl-flex d-lg-flex d-md-flex d-sm-none d-none">
+
+      
+        <!-- Navbar brand -->
+        <a class="navbar-brand text-dark" href="{% url 'profiles:index-view' %}">Remarkable</a>
+    
+        <ul class="nav nav-items text-dark">
+
+      
+    
+        <!-- <li class="nav-item">
+            <a class="nav-link text-dark" href="{% url 'profiles:index-view' %}">How It Works</a>
+        </li> -->
+    
+        <!-- Dropdown -->
+        {% if user.is_authenticated %}
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle  text-dark" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">Profiles</a>
+            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="{% url 'profiles:home-view' %}">All Profiles</a>
+                <a class="dropdown-item" href="{% url 'profiles:all-available-view' %}">Available</a>
+                <a class="dropdown-item" href="{% url 'profiles:all-waiting-view' %}">Waiting</a>
+                <a class="dropdown-item" href="{% url 'profiles:my-invites-view' %}">my Invite</a>
+                <a class="dropdown-item" href="{% url 'profiles:all-accepted-view' %}">My Couple</a>
+
+            </div>
+        </li>
+        {% endif %}
+    
+        </ul>
+    
+    <!-- END NAV SEARCH -->
+    
+    </div>
+    
+    
+    <!-- Dropdown -->
+    {% if user.is_authenticated %}
+    <div class="navbar-nav dropdown d-xl-flex d-lg-flex d-md-flex d-sm-none d-none">
+        <a class="nav-link text-dark" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+        <img class="img-circle" src="{{request.user.profile.image.url}}"alt='no image'style=" height:100px; width:100%;">     
+        {{ request.user|capfirst }}     
+    </a>
+        <div class="dropdown-menu dropdown-primary mr-lg-5 mr-md-5" aria-labelledby="navbarDropdownMenuLink">
+          
+            <a class="dropdown-item" href="{% url 'profiles:my-profile-view' %}">My Profile</a>
+            <a class="dropdown-item" href="{% url 'profiles:ChangePasswordView' %}">Password</a>
+            {% if user.is_staff%}
+            <a class="dropdown-item" href="{% url 'admin:index' %}">Admin</a>
+            {% endif %}
+            <a class="dropdown-item" href="{% url 'profiles:logout' %}">Logout</a>
+        </div>
+    </div>
+    {% else %}
+    <div class="navbar-nav dropdown d-xl-flex d-lg-flex d-md-flex d-sm-none d-none">
+        <a class="nav-link text-dark" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+        Get Started
+        </a>
+        <div class="dropdown-menu dropdown-primary mr-lg-5 mr-md-5" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="{% url 'profiles:register' %}">Register</a>
+            <a class="dropdown-item" href="{% url 'profiles:login' %}">Login</a>
+        </div>
+    </div>
+    {% endif %}
+    
+    
+    <!-- END FOR ALL SCREENS EXCEPT SMALL -->
+    
+    
+    
+    <!-- FOR SMALL SCREENS -->
+    <div class="nav-container-2 d-flex d-lg-none d-md-none d-sm-flex d-flex">
+    
+    <div class="d-flex justify-content-start">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    
+     <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+
+      
+            <!-- Navbar brand -->
+        <a class="navbar-brand text-dark" href="{% url 'profiles:index-view' %}">Remarkable</a>
+    
+        <!-- Links -->
+       
+  
+            <!-- Links -->
+        <!-- <ul class="nav nav-items text-dark">
+            <li class="nav-item active">
+                <a class="nav-link text-dark" href="{% url 'profiles:index-view' %}">How  It Works</a>
+            </li>
+        </ul> -->
+
+        <ul class="nav nav-items text-dark">
+         {% if user.is_authenticated %}
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle  text-dark" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">Profiles</a>
+            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="{% url 'profiles:home-view' %}">All Profiles</a>
+                <a class="dropdown-item" href="{% url 'profiles:all-available-view' %}">Available</a>
+                <a class="dropdown-item" href="{% url 'profiles:all-waiting-view' %}">Waiting</a>
+                <a class="dropdown-item" href="{% url 'profiles:my-invites-view' %}">my Invite</a>
+                <a class="dropdown-item" href="{% url 'profiles:all-accepted-view' %}">My Couple</a>
+            </div>
+        </li>
+        {% endif %}
+        </ul>
+    
+           
+        
+        <!-- Dropdown -->
+        {% if user.is_authenticated %}
+        <div class="nav-item dropdown">
+            <a class="nav-link text-dark" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+        
+            <img class="img-circle" src="{{request.user.profile.image.url}}"alt='no image'style=" height:100px; width:100%;"> 
+            {{ request.user|capfirst }}     
+            </a>
+            <div class="dropdown-menu dropdown-primary mr-lg-5 mr-md-5" aria-labelledby="navbarDropdownMenuLink">
+              
+                <a class="dropdown-item" href="{% url 'profiles:my-profile-view' %}">My Profile</a>
+                <a class="dropdown-item" href="{% url 'profiles:ChangePasswordView' %}">Password</a>
+                {% if user.is_staff%}
+                <a class="dropdown-item" href="{% url 'admin:index' %}">Admin</a>
+                {% endif %}
+                <a class="dropdown-item" href="{% url 'profiles:logout' %}">Logout</a>
+            </div>
+        </div>
+        {% else %}
+        <div class="nav-item dropdown">
+            <a class="nav-link text-dark" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            Get Started
+            </a>
+            <div class="dropdown-menu dropdown-primary mr-lg-5 mr-md-5" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="{% url 'profiles:register' %}">Register</a>
+                <a class="dropdown-item" href="{% url 'profiles:login' %}">Login</a>
+            </div>
+        </div>
+
+        {% endif %}
+        
+    
+      </div>  <!-- Collapsible content -->
+    
+    
+    </div><!-- END FOR SMALL SCREENS -->
+    
+    </nav>

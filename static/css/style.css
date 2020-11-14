@@ -1,0 +1,366 @@
+
+/* ----------------------------------------------------
+  MASONRY PORTFOLIO STYLES
+------------------------------------------------------- */
+
+.masonry_wrapper {
+    overflow:hidden;
+    margin:0 0 30px;
+}
+
+.masonry_wrapper .item img {
+    height: auto !important;
+    height: 100% !important;
+    width: 100%;
+    position: relative;
+    z-index: -2;
+}
+
+.mixed-container .item {
+    padding:10px 5px !important;
+    margin:0 !important;
+    height: auto !important
+}
+
+.mixed-container .item img{
+    padding:0 !important;
+    width:100%;
+    margin:0 !important;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    -webkit-transition: all 150ms ease-in-out;
+    -moz-transition: all 150ms ease-in-out;
+    -o-transition: all 150ms ease-in-out;
+    -ms-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+.mixed-container .item img:hover{
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    -moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+}
+
+.item figure {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.item figure img {
+    position: relative;
+    display: block;
+    opacity: 1;
+}
+.item .recent-item .option {top: 33%;}
+
+.item .recent-item:hover .item-description {
+    top: 50%;
+}
+
+/*------------Masonry-medium-images----------*/
+.medium-images .item .recent-item .option {
+    top: 25%;
+}
+.medium-images .item .recent-item:hover .item-description {
+    top: 48%;
+}
+
+/*-----------Masonry-small-images---------*/
+.small-images .item .recent-item:hover .item-description {
+    top: 45%;
+}
+.small-images .item .recent-item .option {
+    top: 25%;
+}
+/*---------//Masonry-CSS---------------*/
+
+/* Portfolio Single Page
+====================================*/
+.portfolio_single{
+    padding:30px 0;
+}
+.portfolio_single .widget_title h4 span
+{
+    background:#fff;
+}
+
+.project_details {
+    background-color:#fff;
+    overflow:hidden;
+}
+.project_detail_slider {margin-bottom: 30px;}
+.project_desc p{margin-bottom:20px;}
+.project_desc h6, .project_details h6 {
+    font-size: 20px;
+    margin-top: 5px;
+}
+.project_details .details li {
+    border-bottom: 1px solid #F2F2F2;
+    color: #A3A3A3;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 8px 0;
+}
+.project_details .details{
+    margin: 0;
+    padding:0;
+}
+.project_details .details li span {
+    color: #686868;
+    display: block;
+    float: left;
+    font-weight: bold;
+    height: 20px;
+    position: relative;
+    width: 30%;
+}
+.project_details .details li a {
+    color: #A3A3A3;
+    font-size: 12px;
+}
+
+.project_details .details li a:hover {color: #e74c3c;}
+
+.project_detail_box {margin-bottom: 30px;}
+
+.project_description, .project_details{
+    margin-bottom: 30px;
+}
+
+.arrow-left, .arrow-right{
+    width: 23px;
+    height: 23px;
+    display: inline-block;
+    float: left;
+    background-color: #f2f2f2;
+    color: #666;
+    -webkit-transition: all 150ms ease-in-out;
+    -moz-transition: all 150ms ease-in-out;
+    -o-transition: all 150ms ease-in-out;
+    -ms-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+.arrow-left i, .arrow-right i{
+    font-size: 14px;
+    display: block;
+    line-height:16px;
+    padding-top: 4px;
+    text-align: center;
+}
+.arrow-left.active, .arrow-right.active{
+    background-color: #bdc3c7;
+    color: #f2f2f2;
+    cursor: pointer;
+}
+.arrow-left.active:hover,
+.arrow-right.active:hover { background-color: #777;}
+
+/* ======================================================================== */
+/* 7. BLOG STYLING
+/* ======================================================================== */
+
+
+* SOCIAL MEDIA OUR TEAM								 */
+/* ===================================================== */
+.dreamz-team
+{
+    overflow:hidden;
+    
+}
+.social_media_team {
+    position:absolute;
+    background: transparent;
+    /*border:5px solid #3abdd1;
+    */border-radius: 15px;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    text-align:center;
+    transform:scale(0);
+    -webkit-transform:scale(0);
+    -moz-transform:scale(0);
+    -ms-transform:scale(0);
+    -o-transform:scale(0);
+    transition:all s 1 ease-in-out;
+    -webkit-transition:all s 1 ease-in-out;
+    -moz-transition:all s 1 ease-in-out;
+    -ms-transition:all s 1 ease-in-out;
+    -o-transition:all s 1 ease-in-out;
+    visibility:hidden;
+    margin-top: -30px;
+    /*visibility:visible;
+        */
+}  
+@media (max-width: 768px) {
+    .team_social {
+    list-style: none outside none;
+    margin:17% 0 0 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+}
+    }
+    
+.dreamz-team:hover .social_media_team
+{
+    visibility:visible;
+    transform:scale(1.1);
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+    -o-transform:scale(1.1);
+}
+.dreamz-team:hover .pic > img
+{
+    transform:scale(1.2);
+    -webkit-transform:scale(1.2);
+    -moz-transform:scale(1.2);
+    -ms-transform:scale(1.2);
+    -o-transform:scale(1.2);
+}
+.team_social {
+    list-style: none outside none;
+    margin:37% 0 0 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+}
+.team_social li {
+    display: inline-block;
+    margin:0 5px;
+}
+.team_social li a,.team_social li button {
+    color:#363636;
+    background:   #fff;
+    border: 1px solid  #3abdd1;
+    display:block;
+    height: 35px;
+    text-align: center;
+    width: 35px;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+    margin: auto;
+}
+.team_social li a i ,.team_social li button i{
+    font-size: 16px;
+    line-height: 35px;
+    margin-right: 0;
+  
+}
+.team_social li a.fb:hover      {background: #2f5a9a;}
+.team_social li a.twtr:hover    {background: #3abdd1;}
+.team_social li a.gmail:hover   {background: #E72828;}
+
+.team_prof {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color #ecf0f1 #f2f2f2;
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    border-color: #f2f2f2;
+    padding: 10px 15px 5px;
+    overflow: hidden;
+}
+body{
+    background-color: #fff;
+}
+
+.team_prof{ margin-bottom:30px; }
+
+
+.our_team {
+    padding: 30px 0 60px;
+}
+.pic{
+    border:1px solid #eee;
+    border-bottom:none;
+    position:relative;
+    overflow:hidden;
+}
+.pic > img {
+    width: 100%;
+    cursor: pointer;
+    transition:all 0.7s ease-in-out;
+    -webkit-transition:all 0.7s ease-in-out;
+    -moz-transition:all 0.7s ease-in-out;
+    -ms-transition:all 0.7s ease-in-out;
+    -o-transition:all 0.7s ease-in-out;
+}
+.pic > img:hover{
+    cursor: pointer;
+}
+.names {
+    font-family: Pt Sans;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+    color:#666;
+    text-transform: uppercase;
+}
+.names > small {
+    float: right;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 30px;
+    text-transform:capitalize;
+}
+.description {
+    color: #666666;
+    font-family: PT sans;
+    font-size:14px;
+}
+
+
+/* ==================================================
+   26. TITLE
+================================================== */
+.dividerHeading h4,
+.widget_title h4
+{
+    border-bottom: 1px solid #D6D4D4;
+    font-size: 21px;
+    font-weight: normal;
+    margin:0 0 25px 0;
+    padding: 0 0 10px;
+    position: relative;
+}
+
+.dividerHeading h4::before,
+.widget_title h4::before{
+    border-radius: 0 5px 5px 0;
+    bottom: -1px;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    width: 100px;
+}
+
+.dividerHeading h4::before,
+.widget_title h4::before
+{
+    background: #727CB6;
+}
+
+.widget_title h4 {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+

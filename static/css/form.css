@@ -1,0 +1,319 @@
+:root {
+    --primaryColor: rgb(40, 106, 247);
+    --mainWhite: #ffffff;
+    --mainGrey: #ececec;
+    --mainBlack: #000000;
+    --color-primary: #263238;
+    --color-secondary: darkgrey;
+  
+    --color-second: #5EC6FF;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all .5s ease;
+    }
+
+    .containermain{
+      margin-top: -30px;
+
+    }
+  
+ 
+  .article-form{
+  
+
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    float:left;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+  .article-form h3{
+    color: var(--mainWhite);
+  }
+  
+  .article-form input{
+    background: var(--mainWhite);
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 6px;
+    box-sizing: border-box;
+    border: 1px solid #e1e1e1;
+    outline: 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+  .article-form textarea{
+    background: var(--mainWhite);
+    width: 100%;
+    height: 100px;
+    margin: 0 0 20px;
+    padding: 6px;
+    box-sizing: border-box;
+    border: 1px solid #e1e1e1;
+    outline: 0;
+    border-radius: 5x;
+    -webkit-border-radius: 5x;
+    -moz-border-radius: 5x;
+    -ms-border-radius: 5x;
+    -o-border-radius: 5x;
+}
+  .article-form select{
+    background: var(--mainWhite);
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 6px;
+    box-sizing: border-box;
+    border: 1px solid #e1e1e1;
+    outline: 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+  .article-form button{
+  width: 30%;
+  padding: 6px;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  border-radius: 3px;
+  transition: 0.5s;
+  margin: 10px;
+  color: #fff;
+  background: #3abdd1;
+  border: 1px solid  #3abdd1;
+  text-transform: uppercase;
+  
+}
+  .article-form button:hover,.form.button :active{
+    color: var(--mainBlack);
+  }  
+
+ 
+ 
+  @media only screen and (min-width: 300px) and (max-width: 600px){
+   
+    .article-form{
+      width: 100%;
+      margin-bottom: 5px; 
+    }
+    .article-form button{
+      width:90%;
+    }
+  }
+
+
+
+
+
+
+  
+  .changepassword-form{
+    position: relative;
+    z-index: 1;
+    width: 70%;
+    padding: 12px;
+    box-sizing: border-box;
+    float:left;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+  .changepassword-form h3{
+    color: var(--mainWhite);
+  }
+  
+  .changepassword-form input{
+    background: var(--mainWhite);
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 6px;
+    box-sizing: border-box;
+    border: 1px solid #e1e1e1;
+    outline: 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+  .changepassword-form textarea{
+    background: var(--mainWhite);
+    width: 100%;
+    height: 100px;
+    margin: 0 0 20px;
+    padding: 6px;
+    box-sizing: border-box;
+    border: 1px solid #e1e1e1;
+    outline: 0;
+    border-radius: 5x;
+    -webkit-border-radius: 5x;
+    -moz-border-radius: 5x;
+    -ms-border-radius: 5x;
+    -o-border-radius: 5x;
+}
+  .changepassword-form select{
+    background: var(--mainWhite);
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 6px;
+    box-sizing: border-box;
+    border: 1px solid #e1e1e1;
+    outline: 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+  .changepassword-form button{
+  width: 30%;
+  padding: 6px;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  border-radius: 3px;
+  transition: 0.5s;
+  margin: 10px;
+  color: #fff;
+  background: #3abdd1;
+  border: 1px solid  #3abdd1;
+  text-transform: uppercase;
+  
+}
+  .changepassword-form button:hover,.form.button :active{
+    color: var(--mainBlack);
+  }  
+
+ 
+ 
+  @media only screen and (min-width: 300px) and (max-width: 600px){
+   
+    .changepassword-form{
+      width: 90%;
+      margin-bottom: 5px; 
+    }
+    .changepassword-form button{
+      width:90%;
+    }
+  }
+  
+
+
+
+
+
+
+  
+  .profile-form{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    float:left;
+    /* border: 1px solid #e1e1e1; */
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+  .profile-form h3{
+    color: var(--mainWhite);
+  }
+  
+  .profile-form input{
+    background: var(--mainWhite);
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 6px;
+    box-sizing: border-box;
+    border: 1px solid #e1e1e1;
+    outline: 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+  .profile-form textarea{
+    background: var(--mainWhite);
+    width: 100%;
+    height: 100px;
+    margin: 0 0 20px;
+    padding: 6px;
+    box-sizing: border-box;
+    border: 1px solid #e1e1e1;
+    outline: 0;
+    border-radius: 5x;
+    -webkit-border-radius: 5x;
+    -moz-border-radius: 5x;
+    -ms-border-radius: 5x;
+    -o-border-radius: 5x;
+}
+  .profile-form select{
+    background: var(--mainWhite);
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 6px;
+    box-sizing: border-box;
+    border: 1px solid #e1e1e1;
+    outline: 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+  .profile-form button{
+  width: 30%;
+  padding: 6px;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  border-radius: 3px;
+  transition: 0.5s;
+  margin: 10px;
+  color: #fff;
+  background: #3abdd1;
+  border: 1px solid  #3abdd1;
+  text-transform: uppercase;
+  
+}
+  .profile-form button:hover,.form.button :active{
+    color: var(--mainBlack);
+  }  
+
+ 
+ 
+  @media only screen and (min-width: 300px) and (max-width: 600px){
+   
+    .profile-form{
+      width: 100%;
+      margin-bottom: 5px; 
+    }
+    .profile-form button{
+      width:90%;
+    }
+  }
+  

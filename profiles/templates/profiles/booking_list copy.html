@@ -1,0 +1,119 @@
+{% extends 'profiles/base.html' %}
+{% load static %}
+
+{% block title %}
+Booking List
+{% endblock title %}
+
+{% block content %}
+    <div class="container">
+
+        <!--Grid row-->
+ 
+        <div class="row">
+        
+        <div class="col-md-8 mt-4">
+        <!-- START MAIN Card -->
+        <div class="card">
+       
+        <div class="card-body ml-md-2 p-sm-2 p-0 mt-3">
+        
+        <!-- border: 1px solid #000; -->
+        <div class="d-flex flex-xl-row flex-lg-row flex-md-column flex-sm-column flex-column" style="width: 100%;">
+        
+       
+        
+        
+        
+        <div class="account-attributes d-flex justify-content-start align-items-start vertical-align-center flex-column p-xl-4 p-lg-4 p-md-3 p-sm-3 p-0">
+        <div class="d-flex flex-row justify-content-between" style="width: 100%;">
+            <div class="d-flex flex-column justify-content-between ml-3">
+                <h5 class="text-dark">
+                    <strong>
+                        Welcome Dear {{user}}
+                      
+                    </strong>
+                </h5>
+            </div>
+        </div>
+               
+        {% for booking in booking_list %}
+        <div class="d-flex justify-content-between flex-column mt-3 p-3" style="width: 100%;">
+                
+            <div class="d-flex justify-content-between flex-row my-1" style="width: 100%;">
+                <div class="text d-flex">
+                    <span class='text-dark'>Booking Owner:</span>
+                </div>
+                <div class="d-flex">
+                    <span class="text text-primary">{{booking.user}}</span>  
+                </div>
+            </div>
+                 <div class="d-flex justify-content-between flex-row my-1" style="width: 100%;">
+                    <div class="text d-flex">
+                        <span class='text-dark'>Table:</span>
+                    </div>
+                    <div class="d-flex">
+                        <span class="text text-primary">{{booking.table.category}}</span>  
+                    </div>
+                </div>
+
+               
+
+                <div class="d-flex justify-content-between flex-row my-1" style="width: 100%;">
+                    <div class="text d-flex">
+                        <span class='text-dark'>From:</span>
+                    </div>
+                    <div class="d-flex">
+                        <span class="text text-primary">{{booking.check_in}}</span>  
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between flex-row my-1" style="width: 100%;">
+                    <div class="text d-flex">
+                        <span class='text-dark'>To:</span>
+                    </div>
+                    <div class="d-flex">
+                        <span class="text text-primary">{{booking.check_out}}</span>  
+                    </div>
+                </div>
+
+        </div>
+        <div>
+            <button class="btn btn-warning">
+                <a href="{{booking.get_cancel_booking_url}}">Cancel Booking</a>
+            </button>
+        </div>
+
+     
+        <hr>
+
+        {% endfor %}
+
+        </div>  
+        </div>
+        <!-- -->
+        
+        
+        
+        </div> <!-- END CARD BODY -->
+        <br>
+        </div> <!-- END MAIN CARD -->
+        
+        </div>
+        <!-- end col -->
+
+
+
+</div>   
+
+        
+        
+        </div> 
+        <!-- end row -->
+        <br> <br> 
+    
+     
+
+        {% endblock content %}
+
+

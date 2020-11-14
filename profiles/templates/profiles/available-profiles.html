@@ -1,0 +1,78 @@
+{% extends 'profiles/base.html' %}
+{% load static %}
+
+{% block title %}
+Available
+{% endblock title %}
+
+{% block content %}
+ <section class="wrapper">
+    <section class="team">
+        <div class="container containermain">
+            <div class="row  sub_content">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="dividerHeading">
+                        <h4><span>Available Profiles</span></h4>
+                    </div>
+                </div>
+
+                {% for obj in object_list %}
+                {% if obj.user not in rel_receiver and obj.user not in rel_sender %}
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="dreamz-team">
+                        <div class="pic">
+<!-- 
+                            <div class="col-lg-12 pull-lg-12 text-xs-center">
+                    
+                                <img src="" alt="no image" class="rounded mx-auto d-block img-thumbnail2"style=" height:220px; width:100%;"> 
+                                  </div> -->
+
+                            <img src="{{obj.image.url}}"alt='no image' class="rounded mx-auto d-block img-thumbnail4" style=" height:220px; width:100%;">
+                            
+                            <div class="social_media_team">
+                                <ul class="team_social">
+
+                        <form action="{% url 'profiles:send-invite' %}" method="POST">
+                         {% csrf_token %}
+                        <input type="hidden" name="profile_pk" value={{obj.pk}}>
+                        <li><button class="requestbtn" data-placement="top" data-toggle="tooltip" title="Send Invite"><i class="fas fa-plus-circle"></i></button></li>
+                        </form>
+                        <br>
+
+                        <li><a class="twtr" href="{{obj.get_absolute_url}}" data-placement="top" data-toggle="tooltip" title="View profile"><i class="fa fa-eye"></i></a></li> 
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="team_prof">
+                            <h3 class="names">{{obj.user}}<small class="available">Available</small></h3>  
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+             {% endfor %}
+
+            
+            </div>
+        </div>
+    </section>
+</section> 
+
+<!--pagination--> 
+<center>
+    {% if is_paginated %}
+  <nav aria-label="Page navigation conatiner" ></nav>
+  <ul class="pagination justify-content-center">
+    {% if page_obj.has_previous %}
+    <li><a href="?page={{ page_obj.previous_page_number }}" class="pagebtn">&laquo; PREV </a></li>
+    {% endif %}
+    {% if page_obj.has_next %}
+    <li><a href="?page={{ page_obj.next_page_number }}" class="pagebtn"> NEXT &raquo;</a></li>
+
+    {% endif %}
+  </ul>
+  </nav>
+</div>
+{% endif %}
+</center>
+{% endblock content %}
